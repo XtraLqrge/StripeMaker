@@ -5626,7 +5626,8 @@
       const margin = 8;
       const { width, height } = nodeMenu.getBoundingClientRect();
       const right = x + gap + width + margin <= innerWidth || x - gap - width < margin;
-      const top = Math.min(Math.max(y - 22, margin), Math.max(margin, innerHeight - height - margin));
+      const topEdge = workspace.getBoundingClientRect().top + margin;
+      const top = Math.min(Math.max(y - 22, topEdge), Math.max(topEdge, innerHeight - height - margin));
       nodeMenu.dataset.side = right ? "right" : "left";
       nodeMenu.style.left = `${right ? x + gap : x - gap - width}px`;
       nodeMenu.style.top = `${top}px`;

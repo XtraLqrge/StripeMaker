@@ -85,7 +85,7 @@ button {
 
 .modals {
   position: fixed;
-  inset: 1.5rem auto auto 1.5rem;
+  inset: calc(var(--site-nav-height) + 1.5rem) auto auto 1.5rem;
   width: fit-content;
   max-width: min(80vh, calc(100vw - 3rem));
 }
@@ -170,7 +170,7 @@ button {
    by assistive technology. Match SignalMaker's blue editor surfaces. */
 #actionInstruction {
   position: fixed;
-  top: max(.75rem, env(safe-area-inset-top));
+  top: calc(var(--site-nav-height) + .75rem);
   right: max(.75rem, env(safe-area-inset-right));
   z-index: 4900;
   max-width: min(22rem, calc(100vw - 1.5rem));

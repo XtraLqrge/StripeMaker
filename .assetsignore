@@ -1,0 +1,8 @@
+# Publish the browser app and its assets from the repository root.
+/*
+!/index.html
+!/assets/
+!/css/
+!/fonts/
+!/js/
+!/LICENSE

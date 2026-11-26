@@ -1,0 +1,14 @@
+{
+  "name": "stripemaker",
+  "compatibility_date": "2026-10-23",
+  "workers_dev": false,
+  "routes": [
+    {
+      "pattern": "stripe.hwysignmaker.com",
+      "custom_domain": true
+    }
+  ],
+  "assets": {
+    "directory": "."
+  }
+}

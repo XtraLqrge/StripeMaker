@@ -18,7 +18,7 @@
 }
 
 .modals { z-index: 1; }
-.editorContent { max-height: calc(100dvh - 8rem); }
+.editorContent { max-height: calc(100dvh - var(--site-nav-height) - 8rem); }
 
 input, select {
   appearance: auto;
@@ -48,7 +48,7 @@ button:disabled { cursor: default; opacity: 0.5; }
 h3 { font-family: "Overpass", sans-serif; font-size: 0.8rem; font-weight: 600; }
 hr { border: 0; border-top: 1px solid rgba(var(--baseColor), 0.45); margin: 0.75rem 0; }
 
-.headsMenu { width: min(16rem, calc(100vw - 1rem)); max-height: calc(100dvh - 5rem); overflow-y: auto; }
+.headsMenu { width: min(16rem, calc(100vw - 1rem)); max-height: calc(100dvh - var(--site-nav-height) - 5rem); overflow-y: auto; }
 .headActions { display: flex; align-items: center; gap: 0.25rem; margin-top: 0.5rem; }
 .headActions button { flex: 1; padding: 0.25rem; }
 .headPopoverHeader { display: flex; align-items: baseline; justify-content: space-between; gap: 0.25rem; width: 100%; }
@@ -56,9 +56,9 @@ hr { border: 0; border-top: 1px solid rgba(var(--baseColor), 0.45); margin: 0.75
 
 @media (max-width: 768px) {
   #workspace { padding: 1rem 0.5rem 4rem; }
-  .editorContent { max-height: 42dvh; }
+  .editorContent { max-height: min(42dvh, calc(100dvh - var(--site-nav-height) - 5rem)); }
   .fieldRow > label { flex-basis: 8rem; }
-  .headsMenu { max-height: 55dvh; }
+  .headsMenu { max-height: min(55dvh, calc(100dvh - var(--site-nav-height) - 5rem)); }
 }
 
 /* SignalMaker's Heads list rows, reused for the Sheets list. */
@@ -460,7 +460,7 @@ button.medianPoint:focus-visible { outline: 2px solid var(--textColor); outline-
 .shortcutList { display: grid; gap: 0.25rem; max-height: 14rem; overflow-y: auto; }
 .shortcutList label { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; }
 .shortcutList input { width: 7.5rem; text-align: center; cursor: pointer; }
-#settingsMenu { max-height: calc(100vh - 6rem); overflow-y: auto; }
+#settingsMenu { max-height: calc(100dvh - var(--site-nav-height) - 6rem); overflow-y: auto; }
 body.menusHidden #configBar, body.menusHidden .editor, body.menusHidden .headsMenu { display: none !important; }
 
 /* Rotation uses the existing marking handle, with room for its action icon. */

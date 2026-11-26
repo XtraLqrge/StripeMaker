@@ -6,6 +6,7 @@ Thumbs.db
 
 # Local verification artifacts
 node_modules/
+.wrangler/
 artifacts/
 tmp/
 verification/

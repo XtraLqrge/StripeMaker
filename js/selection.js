@@ -712,7 +712,8 @@
       menu.hidden = false;
       const { width, height } = menu.getBoundingClientRect(), margin = 8;
       const right = clientX + 12 + width + margin <= innerWidth;
-      const top = Math.min(Math.max(clientY - 22, margin), Math.max(margin, innerHeight - height - margin));
+      const topEdge = workspace.getBoundingClientRect().top + margin;
+      const top = Math.min(Math.max(clientY - 22, topEdge), Math.max(topEdge, innerHeight - height - margin));
       menu.dataset.side = right ? 'right' : 'left';
       menu.style.left = `${right ? clientX + 12 : clientX - 12 - width}px`;
       menu.style.top = `${top}px`;
